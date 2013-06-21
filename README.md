@@ -7,8 +7,8 @@ Installation
 Clone the library into a directory.
 
 ```
-bundle install
 cd installation_directory
+bundle install
 rackup
 ```
 
