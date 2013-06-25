@@ -2,6 +2,8 @@ require 'bundler/setup'
 require 'active_support/inflector'
 require 'rack'
 
+use Rack::Static, :urls => {"/markdown.css" => '/css/markdown.css'}, :root => 'public'
+
 def module_name_to_const(string)
   klass = string.split("-").map(&:camelize).join
   "Opener::#{klass}::Server".constantize
