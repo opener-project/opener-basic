@@ -2,7 +2,6 @@ require 'bundler/setup'
 require 'active_support/inflector'
 require 'rack'
 
-
 module OpenerBasic
   module_function
   def module_name_to_const(string)
@@ -23,14 +22,13 @@ module OpenerBasic
       "ner" ]
   end
 end
+
 use Rack::Static, :urls => {"/markdown.css" => '/css/markdown.css'}, :root => 'public'
 
 OpenerBasic.modules.each do |module_name|
   require OpenerBasic.module_name_to_require(module_name)
 
-  send(:map, "/#{module_name}") do
+  map "/#{module_name}" do
     run OpenerBasic.module_name_to_const(module_name)
-  end 
-  
-
+  end
 end
