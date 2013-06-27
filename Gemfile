@@ -9,3 +9,4 @@ gem "opener-opinion-detector"
 gem "opener-ner"
 
 gem "activesupport"
+gem "pry"
