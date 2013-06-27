@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'active_support/inflector'
 require 'rack'
+require File.expand_path("../lib/index", __FILE__)
 
 module OpenerBasic
   module_function
@@ -20,7 +21,9 @@ module OpenerBasic
       "POS-tagger",
       "polarity-tagger",
       "opinion-detector",
-      "ner" ]
+      "ner",
+      #"ned",
+      "constituent-parser" ]
   end
 end
 
@@ -35,3 +38,9 @@ OpenerBasic.modules.each do |module_name|
     run OpenerBasic.module_name_to_const(module_name)
   end
 end
+
+map "/" do
+  run Index
+end
+
+

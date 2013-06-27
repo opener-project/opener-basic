@@ -2,21 +2,28 @@ GEM
   remote: https://rubygems.org/
   remote: https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitainooleap@geminabox.olery.com/
   specs:
-    activesupport (3.2.13)
-      i18n (= 0.6.1)
-      multi_json (~> 1.0)
+    activesupport (4.0.0)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    atomic (1.1.10)
     builder (3.2.2)
-    coderay (1.0.9)
     httpclient (2.3.3)
-    i18n (0.6.1)
-    method_source (0.8.1)
+    i18n (0.6.4)
     mini_portile (0.5.0)
+    minitest (4.7.5)
     multi_json (1.7.7)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    opener-build-tools (0.2.8)
+    opener-build-tools (0.2.9)
       rake
-    opener-language-identifier (0.1.5)
+    opener-constituent-parser (0.0.2)
+      opener-constituent-parser-base
+      opener-webservice
+    opener-constituent-parser-base (0.0.1)
+    opener-language-identifier (0.1.6)
       builder
       httpclient
       opener-build-tools
@@ -31,7 +38,7 @@ GEM
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
-    opener-opinion-detector (0.1.1)
+    opener-opinion-detector (0.1.2)
       builder (~> 3.1)
       httpclient
       nokogiri
@@ -40,12 +47,12 @@ GEM
     opener-opinion-detector-base (0.1.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-polarity-tagger (0.1.1)
+    opener-polarity-tagger (0.1.2)
       httpclient
       opener-build-tools (>= 0.2.7)
       rake
       sinatra
-    opener-pos-tagger (0.2.1)
+    opener-pos-tagger (0.2.2)
       builder (~> 3.1)
       httpclient
       nokogiri
@@ -58,24 +65,24 @@ GEM
       opener-build-tools (>= 0.2.7)
       rake
     opener-pos-tagger-en-es (0.1.1)
+      opener-build-tools
     opener-pos-tagger-fr (0.1.1)
       opener-build-tools
     opener-pos-tagger-it (0.1.1)
       opener-build-tools
-    opener-tokenizer (0.1.1)
+    opener-tokenizer (0.2.2)
       builder (~> 3.1)
       httpclient
       nokogiri
       opener-tokenizer-base
       opener-tokenizer-fr
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.1.2)
       opener-build-tools
     opener-tokenizer-fr (0.1.0)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
+    opener-webservice (0.0.2)
+      sinatra (~> 1.4.3)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -84,18 +91,22 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    slop (3.4.5)
+    thread_safe (0.1.0)
+      atomic
     tilt (1.4.1)
+    tzinfo (0.3.37)
+    uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activesupport
+  opener-constituent-parser
   opener-language-identifier
   opener-ner
   opener-opinion-detector
   opener-polarity-tagger
   opener-pos-tagger
   opener-tokenizer
-  pry
+  uuidtools
