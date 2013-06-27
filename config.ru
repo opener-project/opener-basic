@@ -31,8 +31,7 @@ OpenerBasic.modules.each do |module_name|
   require lib
   require "#{lib}/server"
 
-  send(:map, "/#{module_name}") do
+  map "/#{module_name}" do
     run OpenerBasic.module_name_to_const(module_name)
   end
-
 end
