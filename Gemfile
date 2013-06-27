@@ -10,5 +10,5 @@ gem "opener-ner"
 #gem "opener-ned"
 gem "opener-constituent-parser"
 gem "uuidtools"
-
+gem "thin"
 gem "activesupport"
