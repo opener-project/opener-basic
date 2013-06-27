@@ -14,38 +14,52 @@ GEM
     multi_json (1.7.7)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    opener-build-tools (0.2.8)
+    opener-build-tools (0.2.10)
       rake
-    opener-language-identifier (0.1.5)
+    opener-constituent-parser (0.0.2)
+      opener-constituent-parser-base
+      opener-webservice
+    opener-constituent-parser-base (0.0.1)
+    opener-language-identifier (0.1.9)
       builder
       httpclient
       opener-build-tools
+      opener-webservice
       sinatra (~> 1.4.2)
-    opener-ner (0.1.2)
+      uuidtools
+    opener-ned (0.2.1)
+      builder (~> 3.1)
+      httpclient
+      opener-webservice
+      sinatra (~> 1.4)
+    opener-ner (0.2.1)
       httpclient
       nokogiri
       opener-ner-base
       opener-ner-fr
+      opener-webservice
       sinatra (~> 1.4)
     opener-ner-base (0.0.1)
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
-    opener-opinion-detector (0.1.1)
+    opener-opinion-detector (0.1.3)
       builder (~> 3.1)
       httpclient
       nokogiri
       opener-opinion-detector-base
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-opinion-detector-base (0.1.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-polarity-tagger (0.1.1)
+    opener-polarity-tagger (0.1.3)
       httpclient
       opener-build-tools (>= 0.2.7)
+      opener-webservice
       rake
       sinatra
-    opener-pos-tagger (0.2.1)
+    opener-pos-tagger (0.2.5)
       builder (~> 3.1)
       httpclient
       nokogiri
@@ -53,25 +67,31 @@ GEM
       opener-pos-tagger-en-es
       opener-pos-tagger-fr
       opener-pos-tagger-it
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-pos-tagger-base (0.1.2)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-pos-tagger-en-es (0.1.1)
+    opener-pos-tagger-en-es (0.1.2)
+      opener-build-tools
     opener-pos-tagger-fr (0.1.1)
       opener-build-tools
     opener-pos-tagger-it (0.1.1)
       opener-build-tools
-    opener-tokenizer (0.1.1)
+    opener-tokenizer (0.2.3)
       builder (~> 3.1)
       httpclient
       nokogiri
       opener-tokenizer-base
       opener-tokenizer-fr
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.1.2)
       opener-build-tools
     opener-tokenizer-fr (0.1.0)
+    opener-webservice (0.0.7)
+      sinatra (~> 1.4.3)
+      uuidtools
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -86,13 +106,16 @@ GEM
       tilt (~> 1.3, >= 1.3.4)
     slop (3.4.5)
     tilt (1.4.1)
+    uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activesupport
+  opener-constituent-parser
   opener-language-identifier
+  opener-ned
   opener-ner
   opener-opinion-detector
   opener-polarity-tagger
