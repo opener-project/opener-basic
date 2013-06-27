@@ -5,29 +5,34 @@ require File.expand_path("../lib/index", __FILE__)
 
 module OpenerBasic
   module_function
+
   def module_name_to_const(string)
     klass = string.split("-").map(&:camelize).join
-    "Opener::#{klass}::Server".constantize
+
+    return "Opener::#{klass}::Server".constantize
   end
 
   def module_name_to_require(string)
-    #"opener/#{string.gsub(/-/,"_")}/server".downcase
-    "opener/#{string.gsub(/-/,"_")}".downcase
+    return "opener/#{string.gsub(/-/,"_")}".downcase
   end
 
   def modules
-    [ "language-identifier",
+    return [
+      "language-identifier",
       "tokenizer",
       "POS-tagger",
       "polarity-tagger",
       "opinion-detector",
       "ner",
-      #"ned",
-      "constituent-parser" ]
+      "ned",
+      "constituent-parser"
+    ]
   end
 end
 
-use Rack::Static, :urls => {"/markdown.css" => '/css/markdown.css'}, :root => 'public'
+use Rack::Static,
+  :urls => {"/markdown.css" => '/css/markdown.css'},
+  :root => 'public'
 
 OpenerBasic.modules.each do |module_name|
   lib = OpenerBasic.module_name_to_require(module_name)

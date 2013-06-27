@@ -7,9 +7,8 @@ gem "opener-pos-tagger"
 gem "opener-polarity-tagger"
 gem "opener-opinion-detector"
 gem "opener-ner"
+gem "opener-ned"
 gem "opener-constituent-parser"
-
-#gem "opener-ned"
 gem "uuidtools"
 
 gem "activesupport"

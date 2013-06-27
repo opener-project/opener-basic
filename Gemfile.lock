@@ -28,6 +28,8 @@ GEM
       httpclient
       opener-build-tools
       sinatra (~> 1.4.2)
+    opener-ned (0.0.2)
+      opener-build-tools
     opener-ner (0.1.2)
       httpclient
       nokogiri
@@ -104,6 +106,7 @@ DEPENDENCIES
   activesupport
   opener-constituent-parser
   opener-language-identifier
+  opener-ned
   opener-ner
   opener-opinion-detector
   opener-polarity-tagger
