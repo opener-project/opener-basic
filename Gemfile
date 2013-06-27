@@ -11,3 +11,4 @@ gem "opener-ned"
 gem "opener-constituent-parser"
 
 gem "activesupport"
+gem "pry"

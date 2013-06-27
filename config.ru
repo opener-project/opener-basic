@@ -12,7 +12,7 @@ module OpenerBasic
   end
 
   def module_name_to_require(string)
-    return "opener/#{string.gsub(/-/,"_")}/server".downcase
+    return "opener/#{string.gsub(/-/,"_")}".downcase
   end
 
   def modules
@@ -34,7 +34,9 @@ use Rack::Static,
   :root => 'public'
 
 OpenerBasic.modules.each do |module_name|
-  require OpenerBasic.module_name_to_require(module_name)
+  lib = OpenerBasic.module_name_to_require(module_name)
+  require lib
+  require "#{lib}/server"
 
   map "/#{module_name}" do
     run OpenerBasic.module_name_to_const(module_name)
