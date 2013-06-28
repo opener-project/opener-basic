@@ -25,7 +25,8 @@ module OpenerBasic
       "opinion-detector",
       "ner",
       #"ned",
-      "constituent-parser"
+      "constituent-parser",
+      "outlet"
     ]
   end
 end
