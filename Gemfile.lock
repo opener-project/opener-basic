@@ -30,7 +30,7 @@ GEM
       opener-constituent-parser-base
       opener-webservice
     opener-constituent-parser-base (0.0.1)
-    opener-language-identifier (0.1.9)
+    opener-language-identifier (0.2.0)
       builder
       httpclient
       opener-build-tools
@@ -48,15 +48,16 @@ GEM
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
-    opener-opinion-detector (0.1.3)
+    opener-opinion-detector (0.1.5)
       httpclient
       nokogiri
       opener-opinion-detector-base
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-opinion-detector-base (0.1.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-outlet (0.0.8)
+    opener-outlet (0.1.0)
       activerecord (~> 3.2)
       builder
       httpclient
@@ -71,13 +72,14 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (0.2.3)
+    opener-pos-tagger (0.2.7)
       httpclient
       nokogiri
       opener-pos-tagger-base
       opener-pos-tagger-en-es
       opener-pos-tagger-fr
       opener-pos-tagger-it
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-pos-tagger-base (0.1.2)
       opener-build-tools (>= 0.2.7)
@@ -88,7 +90,7 @@ GEM
       opener-build-tools
     opener-pos-tagger-it (0.1.1)
       opener-build-tools
-    opener-tokenizer (0.2.3)
+    opener-tokenizer (0.2.5)
       httpclient
       nokogiri
       opener-tokenizer-base
@@ -97,7 +99,7 @@ GEM
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.1.2)
       opener-build-tools
-    opener-tokenizer-fr (0.1.0)
+    opener-tokenizer-fr (0.1.1)
     opener-webservice (0.0.8)
       json
       sinatra (~> 1.4.3)
@@ -128,7 +130,7 @@ DEPENDENCIES
   opener-language-identifier
   opener-ner
   opener-opinion-detector
-  opener-outlet (~> 0.0.6)
+  opener-outlet (~> 0.1.0)
   opener-polarity-tagger
   opener-pos-tagger
   opener-tokenizer
