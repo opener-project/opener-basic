@@ -24,7 +24,7 @@ module OpenerBasic
       "polarity-tagger",
       "opinion-detector",
       "ner",
-      #"ned",
+      "ned",
       "constituent-parser",
       "outlet"
     ]
