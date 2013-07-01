@@ -57,7 +57,7 @@ GEM
     opener-opinion-detector-base (0.1.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-outlet (0.1.0)
+    opener-outlet (0.1.1)
       activerecord (~> 3.2)
       builder
       httpclient
@@ -130,7 +130,7 @@ DEPENDENCIES
   opener-language-identifier
   opener-ner
   opener-opinion-detector
-  opener-outlet (~> 0.1.0)
+  opener-outlet (~> 0.1.1)
   opener-polarity-tagger
   opener-pos-tagger
   opener-tokenizer
