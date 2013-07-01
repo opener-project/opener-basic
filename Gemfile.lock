@@ -71,13 +71,14 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (0.2.3)
+    opener-pos-tagger (0.2.6)
       httpclient
       nokogiri
       opener-pos-tagger-base
       opener-pos-tagger-en-es
       opener-pos-tagger-fr
       opener-pos-tagger-it
+      opener-webservice
       sinatra (~> 1.4.2)
     opener-pos-tagger-base (0.1.2)
       opener-build-tools (>= 0.2.7)
