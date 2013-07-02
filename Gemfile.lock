@@ -55,7 +55,7 @@ GEM
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
-    opener-opinion-detector (0.1.7)
+    opener-opinion-detector (0.1.8)
       httpclient
       nokogiri
       opener-opinion-detector-base
