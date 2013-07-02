@@ -15,6 +15,10 @@ environment 'production'
 threads 0, 512
 workers 4
 
+on_restart do
+  ActiveRecord::Base.connection.close if defined?(ActiveRecord)
+end
+
 on_worker_boot do
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
