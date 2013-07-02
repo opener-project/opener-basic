@@ -2,6 +2,7 @@ require 'sinatra'
 require 'airbrake'
 require 'active_support/inflector'
 
+require_relative 'basic/ignored_input'
 require_relative 'basic/server'
 
 module Opener
