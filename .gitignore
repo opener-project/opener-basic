@@ -8,3 +8,5 @@ Gemfile.lock
 tmp/*
 db/*
 log/*.log
+
+!.gitkeep
