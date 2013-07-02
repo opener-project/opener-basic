@@ -10,7 +10,6 @@ module Opener
       end
 
       configure :production do
-        enable :raise_errors
         use Airbrake::Rack
       end
 

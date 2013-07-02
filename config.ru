@@ -15,7 +15,6 @@ Opener::Basic::MODULES.each do |module_name|
 
     # Using #configure doesn't work if there already is a configuration object
     # in place (by the looks of it).
-    constant.enable :raise_errors
     constant.use Airbrake::Rack
 
     run constant
