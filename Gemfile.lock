@@ -46,7 +46,7 @@ GEM
       httpclient
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (0.2.2)
+    opener-ner (0.2.3)
       httpclient
       nokogiri
       opener-ner-base
