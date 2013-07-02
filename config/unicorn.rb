@@ -5,3 +5,4 @@ stderr_path File.expand_path('../../log/stderr.log', __FILE__)
 
 working_directory File.expand_path('../../', __FILE__)
 worker_processes 5
+preload false
