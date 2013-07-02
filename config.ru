@@ -1,60 +1,26 @@
 require 'bundler/setup'
-require 'active_support/inflector'
-require 'rack'
-require 'airbrake'
-
+require File.expand_path('../lib/opener/basic', __FILE__)
 require File.expand_path('../config/airbrake', __FILE__)
-require File.expand_path('../lib/index', __FILE__)
 
-module OpenerBasic
-  module_function
+use Airbrake::Rack
 
-  def module_name_to_const(string)
-    klass = string.split("-").map(&:camelize).join
+Opener::Basic::MODULES.each do |module_name|
+  require_path = Opener::Basic.module_name_to_require(module_name)
 
-    return "Opener::#{klass}::Server".constantize
-  end
-
-  def module_name_to_require(string)
-    return "opener/#{string.gsub(/-/,"_")}".downcase
-  end
-
-  def modules
-    return [
-      "language-identifier",
-      "tokenizer",
-      "POS-tagger",
-      "polarity-tagger",
-      "opinion-detector",
-      "ner",
-      "ned",
-      "constituent-parser",
-      "outlet"
-    ]
-  end
-end
-
-# Use Airbrake in production. This should come before the other middleware.
-if ENV['RACK_ENV'] == 'production'
-  use Airbrake::Rack
-end
-
-use Rack::Static,
-  :urls => {"/markdown.css" => '/css/markdown.css'},
-  :root => 'public'
-
-OpenerBasic.modules.each do |module_name|
-  lib = OpenerBasic.module_name_to_require(module_name)
-  require lib
-  require "#{lib}/server"
+  require(require_path)
+  require(File.join(require_path, 'server'))
 
   map "/#{module_name}" do
-    run OpenerBasic.module_name_to_const(module_name)
+    constant = Opener::Basic.module_name_to_const(module_name)
+
+    constant.configure :production do
+      enable :raise_errors
+    end
+
+    run constant
   end
 end
 
-map "/" do
-  run Index
+map '/' do
+  run Opener::Basic::Server
 end
-
-

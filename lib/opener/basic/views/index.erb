@@ -10,7 +10,7 @@
     <p>The following webservices are available</p>
     <p>
     <ul>
-      <% OpenerBasic.modules.each do |module_name| %>
+      <% Opener::Basic::MODULES.each do |module_name| %>
         <li><a href="<%=url("/#{module_name}")%>"><%=module_name%></a></li>
       <% end %>
     </ul>
@@ -18,7 +18,7 @@
     <h2> Posting to the webservices</h2>
     <p> You can directly post to these webservices using the following endpoints </p>
     <ul>
-      <% OpenerBasic.modules.each do |module_name| %>
+      <% Opener::Basic::MODULES.each do |module_name| %>
         <li><%=url("/#{module_name}")%></li>
       <% end %>
     </ul>
