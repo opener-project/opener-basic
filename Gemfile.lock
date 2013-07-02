@@ -46,7 +46,7 @@ GEM
       httpclient
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (0.2.3)
+    opener-ner (0.2.4)
       httpclient
       nokogiri
       opener-ner-base
@@ -57,7 +57,7 @@ GEM
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
-    opener-opinion-detector (0.1.5)
+    opener-opinion-detector (0.1.6)
       httpclient
       nokogiri
       opener-opinion-detector-base
