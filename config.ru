@@ -11,10 +11,10 @@ Opener::Basic::MODULES.each do |module_name|
   map "/#{module_name}" do
     constant = Opener::Basic.module_name_to_const(module_name)
 
-    constant.configure :production do
-      enable :raise_errors
-      use Airbrake::Rack
-    end
+    # Using #configure doesn't work if there already is a configuration object
+    # in place (by the looks of it).
+    constant.enable :raise_errors
+    constant.use Airbrake::Rack
 
     run constant
   end
