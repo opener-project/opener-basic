@@ -1,7 +1,10 @@
 require 'bundler/setup'
 require 'active_support/inflector'
 require 'rack'
-require File.expand_path("../lib/index", __FILE__)
+require 'airbrake'
+
+require File.expand_path('../config/airbrake', __FILE__)
+require File.expand_path('../lib/index', __FILE__)
 
 module OpenerBasic
   module_function
@@ -29,6 +32,11 @@ module OpenerBasic
       "outlet"
     ]
   end
+end
+
+# Use Airbrake in production. This should come before the other middleware.
+if ENV['RACK_ENV'] == 'production'
+  use Airbrake::Rack
 end
 
 use Rack::Static,
