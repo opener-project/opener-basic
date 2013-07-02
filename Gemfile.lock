@@ -44,7 +44,7 @@ GEM
       httpclient
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (0.2.4)
+    opener-ner (0.2.5)
       httpclient
       nokogiri
       opener-ner-base
@@ -79,7 +79,7 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (0.2.9)
+    opener-pos-tagger (0.2.10)
       httpclient
       nokogiri
       opener-pos-tagger-base
