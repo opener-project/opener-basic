@@ -1,4 +1,3 @@
-require 'pry'
 require 'bundler/setup'
 require File.expand_path('../lib/opener/basic', __FILE__)
 require File.expand_path('../config/airbrake', __FILE__)
