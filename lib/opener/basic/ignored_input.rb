@@ -15,7 +15,7 @@ module Opener
       # @return [Array]
       #
       IGNORE_MATCHES = [
-        /internal server error/i
+        /$internal server error/i
       ].freeze
 
       before do
