@@ -12,5 +12,5 @@ gem "opener-outlet", "~>0.1.2"
 gem "opener-ned", '>= 0.2.2'
 gem "opener-constituent-parser"
 gem "uuidtools"
-gem "unicorn"
+gem "puma"
 gem "activesupport", "~>3.2"
