@@ -93,7 +93,7 @@ GEM
     opener-pos-tagger-base (0.1.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-pos-tagger-en-es (0.1.3)
+    opener-pos-tagger-en-es (0.1.4)
       opener-build-tools
     opener-pos-tagger-fr (0.1.1)
       opener-build-tools
