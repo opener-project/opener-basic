@@ -2,6 +2,7 @@ require 'bundler/setup'
 require File.expand_path('../lib/opener/basic', __FILE__)
 require File.expand_path('../config/airbrake', __FILE__)
 
+use ActiveRecord::ConnectionAdapters::ConnectionManagement
 use Opener::Basic::IgnoredInput
 
 Opener::Basic::MODULES.each do |module_name|
