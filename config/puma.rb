@@ -7,7 +7,7 @@ stdout_redirect(
   File.expand_path('../../log/stderr.log', __FILE__)
 )
 
-bind        'localhost', 80
+bind        'tcp://0.0.0.0:80'
 daemonize   true
 environment 'production'
 
