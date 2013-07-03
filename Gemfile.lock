@@ -107,7 +107,7 @@ GEM
     opener-tokenizer-base (0.1.2)
       opener-build-tools
     opener-tokenizer-fr (0.1.1)
-    opener-webservice (0.0.10)
+    opener-webservice (0.1.0)
       json
       sinatra (~> 1.4.3)
       uuidtools
