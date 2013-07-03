@@ -1,6 +1,7 @@
 directory   File.expand_path('../../', __FILE__)
 rackup      File.expand_path('../../config.ru', __FILE__)
 state_path  '/var/run/opener-basic.state'
+pidfile     '/var/run/opener-basic.pid'
 
 stdout_redirect(
   File.expand_path('../../log/stdout.log', __FILE__),
