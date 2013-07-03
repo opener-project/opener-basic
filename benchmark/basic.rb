@@ -38,9 +38,10 @@ EOF
 start     = "#{entrypoint}/language-identifier"
 callbacks = callbacks.map { |path| "#{entrypoint}/#{path}" }
 params    = {:input => input, :kaf => true, :'callbacks[]' => callbacks}
+client    = HTTPClient.new
 
 amount.times do |n|
   logger.info("Sending request ##{n + 1}")
 
-  HTTPClient.post(start, :body => params)
+  client.post_async(start, :body => params)
 end
