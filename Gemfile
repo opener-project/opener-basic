@@ -8,7 +8,7 @@ gem "opener-pos-tagger"
 gem "opener-polarity-tagger"
 gem "opener-opinion-detector"
 gem "opener-ner"
-gem "opener-outlet", "~>0.1.2"
+gem "opener-outlet", "~>0.1.4"
 gem "opener-ned", '>= 0.2.2'
 gem "opener-constituent-parser"
 gem "uuidtools"
