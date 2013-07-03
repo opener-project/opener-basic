@@ -11,7 +11,7 @@
     <p>
     <ul>
       <% Opener::Basic::MODULES.each do |module_name| %>
-        <li><a href="<%=url("/#{module_name}")%>"><%=module_name%></a></li>
+        <li><a href="<%=url("/#{module_name.downcase}")%>"><%=module_name%></a></li>
       <% end %>
     </ul>
 
@@ -19,7 +19,7 @@
     <p> You can directly post to these webservices using the following endpoints </p>
     <ul>
       <% Opener::Basic::MODULES.each do |module_name| %>
-        <li><%=url("/#{module_name}")%></li>
+        <li><%=url("/#{module_name.downcase}")%></li>
       <% end %>
     </ul>
 

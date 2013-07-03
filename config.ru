@@ -11,7 +11,7 @@ Opener::Basic::MODULES.each do |module_name|
   require(require_path)
   require(File.join(require_path, 'server'))
 
-  map "/#{module_name}" do
+  map "/#{module_name.downcase}" do
     constant = Opener::Basic.module_name_to_const(module_name)
 
     # Using #configure doesn't work if there already is a configuration object
