@@ -12,7 +12,6 @@ bind        'tcp://0.0.0.0:80'
 daemonize   true
 environment 'production'
 
-# Minimum of 0 threads, maximum of 512.
 threads 32, 8192
 workers 4
 
