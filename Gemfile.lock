@@ -111,7 +111,7 @@ GEM
       json
       sinatra (~> 1.4.3)
       uuidtools
-    puma (2.2.0)
+    puma (2.4.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
