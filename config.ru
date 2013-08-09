@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require File.expand_path('../lib/opener/basic', __FILE__)
-require File.expand_path('../config/airbrake', __FILE__)
+require File.expand_path('../config/rollbar', __FILE__)
 
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 use Opener::Basic::IgnoredInput
@@ -16,7 +16,16 @@ Opener::Basic::MODULES.each do |module_name|
 
     # Using #configure doesn't work if there already is a configuration object
     # in place (by the looks of it).
-    constant.use Airbrake::Rack
+    if Sinatra::Base.environment == :production
+      constant.set :raise_errors, false
+      constant.set :show_exceptions, false
+    end
+
+    constant.error do
+      Rollbar.report_exception(env['sinatra.error'], :module => module_name)
+
+      halt(500, env['sinatra.error'].message)
+    end
 
     run constant
   end

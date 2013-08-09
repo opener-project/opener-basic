@@ -10,7 +10,14 @@ module Opener
       end
 
       configure :production do
-        use Airbrake::Rack
+        set :raise_errors, false
+        set :show_exceptions, false
+      end
+
+      error do
+        Rollbar.report_exception(env['sinatra.error'])
+
+        halt(500, env['sinatra.error'].message)
       end
 
       get '/' do

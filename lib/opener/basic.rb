@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'airbrake'
+require 'rollbar'
 require 'active_support/inflector'
 require 'active_record'
 
