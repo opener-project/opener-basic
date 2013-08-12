@@ -22,7 +22,11 @@ Opener::Basic::MODULES.each do |module_name|
     end
 
     constant.error do
-      Rollbar.report_exception(env['sinatra.error'], :module => module_name)
+      Rollbar.report_exception(
+        env['sinatra.error'],
+        :module     => module_name,
+        :parameters => params
+      )
 
       halt(500, env['sinatra.error'].message)
     end
