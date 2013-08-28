@@ -14,6 +14,7 @@ gem "opener-constituent-parser"
 gem "uuidtools"
 gem "puma"
 gem "activesupport", "~>3.2"
+gem 'improved-rack-throttle'
 
 group :development do
   gem 'pry'

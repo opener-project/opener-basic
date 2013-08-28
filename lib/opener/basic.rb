@@ -2,8 +2,11 @@ require 'sinatra'
 require 'rollbar'
 require 'active_support/inflector'
 require 'active_record'
+require 'rack/throttle'
 
+require_relative 'basic/fixed_hash'
 require_relative 'basic/ignored_input'
+require_relative 'basic/post_limit'
 require_relative 'basic/server'
 
 module Opener

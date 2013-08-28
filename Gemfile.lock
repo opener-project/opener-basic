@@ -18,6 +18,8 @@ GEM
     coderay (1.0.9)
     httpclient (2.3.3)
     i18n (0.6.1)
+    improved-rack-throttle (0.7.1)
+      rack (>= 1.0.0)
     json (1.8.0)
     method_source (0.8.2)
     mini_portile (0.5.0)
@@ -141,6 +143,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (~> 3.2)
+  improved-rack-throttle
   opener-constituent-parser
   opener-language-identifier
   opener-ned (>= 0.2.2)
