@@ -12,7 +12,7 @@ bind        'tcp://0.0.0.0:80'
 daemonize   true
 environment 'production'
 
-threads 32, 8192
+threads 32, 4096
 workers 4
 
 on_restart do
