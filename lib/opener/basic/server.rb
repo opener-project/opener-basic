@@ -12,6 +12,9 @@ module Opener
       configure :production do
         set :raise_errors, false
         set :show_exceptions, false
+
+        # Errors are already tracked in Rollbar and they only clog log files.
+        set :dump_errors, false
       end
 
       error do
