@@ -64,7 +64,7 @@ GEM
     opener-opinion-detector-base (0.1.6)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-outlet (0.1.4)
+    opener-outlet (0.1.5)
       activerecord (~> 3.2)
       builder
       httpclient
