@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 source 'https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitainooleap@geminabox.olery.com'
 
 gem "rollbar"
-gem "opener-language-identifier"
+gem "opener-language-identifier", ">= 1.1.0"
 gem "opener-tokenizer", ">= 0.3.1"
 gem "opener-pos-tagger"
 gem "opener-polarity-tagger"

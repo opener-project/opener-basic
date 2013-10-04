@@ -33,7 +33,7 @@ GEM
       opener-constituent-parser-base
       opener-webservice
     opener-constituent-parser-base (0.0.1)
-    opener-language-identifier (0.2.0)
+    opener-language-identifier (1.1.0)
       builder
       httpclient
       opener-build-tools
@@ -142,7 +142,7 @@ DEPENDENCIES
   activesupport (~> 3.2)
   improved-rack-throttle
   opener-constituent-parser
-  opener-language-identifier
+  opener-language-identifier (>= 1.1.0)
   opener-ned (>= 0.2.2)
   opener-ner
   opener-opinion-detector
