@@ -3,7 +3,7 @@ source 'https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitai
 
 gem "rollbar"
 gem "opener-language-identifier"
-gem "opener-tokenizer"
+gem "opener-tokenizer", ">= 0.3.1"
 gem "opener-pos-tagger"
 gem "opener-polarity-tagger"
 gem "opener-opinion-detector"
