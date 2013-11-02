@@ -21,6 +21,7 @@ module Opener
       "tokenizer",
       "POS-tagger",
       "polarity-tagger",
+      "property-tagger",
       "opinion-detector",
       "ner",
       "ned",

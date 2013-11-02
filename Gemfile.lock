@@ -2,29 +2,29 @@ GEM
   remote: https://rubygems.org/
   remote: https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitainooleap@geminabox.olery.com/
   specs:
-    activemodel (3.2.13)
-      activesupport (= 3.2.13)
+    activemodel (3.2.14)
+      activesupport (= 3.2.14)
       builder (~> 3.0.0)
-    activerecord (3.2.13)
-      activemodel (= 3.2.13)
-      activesupport (= 3.2.13)
+    activerecord (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activesupport (3.2.13)
-      i18n (= 0.6.1)
+    activesupport (3.2.14)
+      i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
     coderay (1.0.9)
-    httpclient (2.3.3)
-    i18n (0.6.1)
+    httpclient (2.3.4.1)
+    i18n (0.6.5)
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
     json (1.8.0)
     method_source (0.8.2)
-    mini_portile (0.5.0)
-    multi_json (1.7.7)
-    mysql2 (0.3.11)
+    mini_portile (0.5.1)
+    multi_json (1.7.9)
+    mysql2 (0.3.13)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     opener-build-tools (0.2.10)
@@ -73,7 +73,7 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
-    opener-polarity-tagger (0.1.3)
+    opener-polarity-tagger (0.1.4)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
@@ -97,6 +97,12 @@ GEM
       opener-build-tools
     opener-pos-tagger-it (0.1.1)
       opener-build-tools
+    opener-property-tagger (0.2.1)
+      httpclient
+      opener-build-tools (>= 0.2.7)
+      opener-webservice
+      rake
+      sinatra
     opener-tokenizer (0.2.5)
       httpclient
       nokogiri
@@ -120,13 +126,13 @@ GEM
       yard (>= 0.8)
     pry-theme (0.2.0)
       json
-    puma (2.4.0)
+    puma (2.5.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
     rake (10.1.0)
-    rollbar (0.10.9)
+    rollbar (0.10.12)
       multi_json (~> 1.5)
     sinatra (1.4.3)
       rack (~> 1.4)
@@ -149,9 +155,10 @@ DEPENDENCIES
   opener-ned (>= 0.2.2)
   opener-ner
   opener-opinion-detector
-  opener-outlet (~> 0.1.4)
+  opener-outlet (~> 0.1.3)
   opener-polarity-tagger
   opener-pos-tagger
+  opener-property-tagger
   opener-tokenizer
   pry
   pry-doc
