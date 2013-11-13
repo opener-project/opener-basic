@@ -97,7 +97,7 @@ GEM
       opener-build-tools
     opener-pos-tagger-it (0.2.0)
       opener-build-tools
-    opener-property-tagger (0.2.1)
+    opener-property-tagger (0.3.0)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
