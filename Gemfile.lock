@@ -51,7 +51,7 @@ GEM
       opener-ner-fr
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner-base (0.0.1)
+    opener-ner-base (0.1.0)
       opener-build-tools
     opener-ner-fr (0.0.1)
       opener-build-tools
@@ -135,7 +135,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    slop (3.4.6)
+    slop (3.4.7)
     tilt (1.4.1)
     tzinfo (0.3.38)
     uuidtools (2.1.4)
