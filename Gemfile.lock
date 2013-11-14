@@ -61,7 +61,7 @@ GEM
       opener-opinion-detector-base
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-opinion-detector-base (0.1.8)
+    opener-opinion-detector-base (0.2.0)
       opener-build-tools (>= 0.2.7)
       rake
     opener-outlet (0.1.5)
@@ -97,7 +97,7 @@ GEM
       opener-build-tools
     opener-pos-tagger-it (0.2.0)
       opener-build-tools
-    opener-property-tagger (0.3.0)
+    opener-property-tagger (0.4.0)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
