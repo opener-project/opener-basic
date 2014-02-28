@@ -26,6 +26,7 @@ module Opener
       "ner",
       "ned",
       "constituent-parser",
+      "kaf-naf-parser",
       "outlet"
     ].freeze
 

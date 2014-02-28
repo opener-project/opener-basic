@@ -12,6 +12,7 @@ gem "opener-outlet", "~>0.1.3"
 gem "opener-ned", '>= 0.2.2'
 gem "opener-constituent-parser"
 gem "opener-property-tagger"
+gem "kaf-naf-parser"
 gem "uuidtools"
 gem "puma"
 gem "activesupport", "~>3.2"
