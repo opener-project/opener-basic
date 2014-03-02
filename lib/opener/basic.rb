@@ -19,6 +19,7 @@ module Opener
     MODULES = [
       "language-identifier",
       "tokenizer",
+      "tree-tagger",
       "POS-tagger",
       "polarity-tagger",
       "property-tagger",
