@@ -13,12 +13,7 @@ daemonize   true
 environment 'production'
 
 threads 32, 4096
-workers 4
 
 on_restart do
   ActiveRecord::Base.connection.close if defined?(ActiveRecord)
-end
-
-on_worker_boot do
-  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
