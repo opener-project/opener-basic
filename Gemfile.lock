@@ -44,7 +44,7 @@ GEM
       mini_portile (~> 0.5.0)
     opener-build-tools (0.4.1)
       rake
-    opener-constituent-parser (0.1.1)
+    opener-constituent-parser (0.2.0)
       opener-constituent-parser-base (>= 0.1.0)
       opener-webservice
     opener-constituent-parser-base (0.2.0)
