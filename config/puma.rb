@@ -8,7 +8,7 @@ stdout_redirect(
   File.expand_path('../../log/stderr.log', __FILE__)
 )
 
-bind        'tcp://0.0.0.0:80'
+bind        'unix:///var/run/opener-basic/puma.sock'
 daemonize   true
 environment 'production'
 
