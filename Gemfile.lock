@@ -77,7 +77,7 @@ GEM
       opener-opinion-detector-base
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-opinion-detector-base (0.11.2)
+    opener-opinion-detector-base (0.11.3)
       opener-build-tools (>= 0.2.7)
       rake
     opener-outlet (0.2.2)
@@ -172,6 +172,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   activesupport (~> 3.2)
