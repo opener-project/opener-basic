@@ -12,7 +12,7 @@ bind        'tcp://0.0.0.0:9000'
 daemonize   true
 environment 'production'
 
-threads 32, 4096
+threads 128, 1024
 
 on_restart do
   ActiveRecord::Base.connection.close if defined?(ActiveRecord)
