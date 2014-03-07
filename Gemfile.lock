@@ -21,12 +21,14 @@ GEM
     arel (3.0.3)
     builder (3.0.4)
     coderay (1.1.0)
+    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
     jdbc-mysql (5.1.28)
+    json (1.8.1)
     json (1.8.1-java)
     kaf-naf-parser (0.6.1)
       builder
@@ -37,7 +39,9 @@ GEM
       uuidtools
     method_source (0.8.2)
     mini_portile (0.5.2)
-    multi_json (1.8.4)
+    multi_json (1.9.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     nokogiri (1.6.1-java)
       mini_portile (~> 0.5.0)
     opener-build-tools (0.4.1)
@@ -118,7 +122,7 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-scorer (0.3.0)
+    opener-scorer (0.3.1)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
       builder
