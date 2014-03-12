@@ -152,7 +152,7 @@ GEM
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.4.1)
     opener-tree-tagger (0.12.1)
-    opener-webservice (0.1.1)
+    opener-webservice (0.2.1)
       json
       sinatra (~> 1.4.3)
       uuidtools
