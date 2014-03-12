@@ -19,6 +19,10 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
+    aws-sdk (1.36.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
     ffi (1.9.3)
@@ -122,6 +126,14 @@ GEM
       opener-webservice
       rake
       sinatra
+    opener-s3-outlet (0.0.1)
+      aws-sdk
+      builder (~> 3.0.0)
+      httpclient
+      nokogiri
+      opener-webservice
+      sinatra (~> 1.4.2)
+      uuidtools
     opener-scorer (0.3.1)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
@@ -198,6 +210,7 @@ DEPENDENCIES
   opener-polarity-tagger
   opener-pos-tagger
   opener-property-tagger
+  opener-s3-outlet
   opener-scorer
   opener-tokenizer (>= 0.4.4)
   opener-tree-tagger

@@ -29,7 +29,8 @@ module Opener
       "constituent-parser",
       "kaf-naf-parser",
       "outlet",
-      "scorer"
+      "scorer",
+      "s3-outlet"
     ].freeze
 
     ##
