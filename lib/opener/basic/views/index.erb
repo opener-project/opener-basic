@@ -7,6 +7,9 @@
   <body>
     <h1>Opener Webservices</h1>
 
+    <p>Want a test drive? <a href="#test">Click here to see the fast input form</a>.<p>
+
+    <h2>Endpoints</h2>
     <p>The following webservices are available</p>
     <p>
     <ul>
@@ -14,6 +17,41 @@
         <li><a href="<%=url("/#{module_name.downcase}")%>"><%=module_name%></a></li>
       <% end %>
     </ul>
+    <a name="test"></a>
+    <h2 name="test">Test Drive</h2>
+    <p>Paste a text below and check the checkboxes of the services you want to chain together.
+    Once you press submit you will see a URL where (after several seconds) you can ask for the result of your analysis.
+    The full OpeNER chain can take more than 30 seconds, so please be patient if you decide to check all boxes.</p>
+
+    <form action="/language-identifier" method="post">
+      <div>
+        <label for="input"/>Type your (plain, non-kaf) text here*</label>
+        <br/>
+
+        <textarea name="input" id="text" rows="10" cols="50"/></textarea>
+      </div>
+
+      <% Opener::Basic::MODULES.each do |module_name| %>
+        <div>
+          <label for="<%=module_name.downcase%>">
+            <input type="checkbox"
+                   name="callbacks[]"
+                   value="<%=request.base_url%>/<%=module_name.downcase%>"
+                   <%="checked disabled" if module_name.downcase == "language-identifier"%>/>
+            <%=module_name.downcase%>
+          </label>
+        </div>
+      <% end %>
+
+
+      <div>
+        <label for="error_callback">Error Callback</label>
+        <br />
+
+        <input id="error_callback" type="text" name="error_callback" />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
 
     <h2> Posting to the webservices</h2>
     <p> You can directly post to these webservices using the following endpoints </p>
