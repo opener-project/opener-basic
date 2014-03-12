@@ -25,7 +25,6 @@ GEM
       uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
-    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
@@ -85,10 +84,10 @@ GEM
     opener-opinion-detector-base (0.11.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-outlet (0.2.2)
-      activerecord (~> 3.2.0)
+    opener-outlet (0.3.2)
+      activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
-      activesupport (~> 3.2.0)
+      activesupport (~> 3.2)
       builder (~> 3.0.0)
       httpclient
       jdbc-mysql
@@ -189,7 +188,7 @@ GEM
     spoon (0.0.4)
       ffi
     tilt (1.4.1)
-    tzinfo (0.3.38)
+    tzinfo (0.3.39)
     uuidtools (2.1.4)
     yard (0.8.7.3)
 
