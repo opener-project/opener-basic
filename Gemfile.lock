@@ -31,7 +31,6 @@ GEM
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
     jdbc-mysql (5.1.28)
-    json (1.8.1)
     json (1.8.1-java)
     kaf-naf-parser (0.6.1)
       builder
@@ -43,8 +42,6 @@ GEM
     method_source (0.8.2)
     mini_portile (0.5.2)
     multi_json (1.9.0)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
     nokogiri (1.6.1-java)
       mini_portile (~> 0.5.0)
     opener-build-tools (0.4.1)
@@ -64,16 +61,13 @@ GEM
       httpclient
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (0.3.0)
+    opener-ner (1.0.0)
       httpclient
       nokogiri
       opener-ner-base
-      opener-ner-fr
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner-base (1.3.2)
-      opener-build-tools
-    opener-ner-fr (1.0.0)
+    opener-ner-base (1.4.0)
       opener-build-tools
     opener-opinion-detector (0.3.0)
       httpclient
