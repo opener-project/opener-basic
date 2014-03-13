@@ -25,7 +25,7 @@ module Opener
       "property-tagger",
       "opinion-detector",
       "ner",
-      "ned",
+      #"ned",
       "constituent-parser",
       "kaf-naf-parser",
       "outlet",
