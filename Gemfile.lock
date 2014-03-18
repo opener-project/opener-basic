@@ -81,10 +81,10 @@ GEM
     opener-opinion-detector-base (0.11.3)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-outlet (0.2.2)
-      activerecord (~> 3.2.0)
+    opener-outlet (0.3.2)
+      activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
-      activesupport (~> 3.2.0)
+      activesupport (~> 3.2)
       builder (~> 3.0.0)
       httpclient
       jdbc-mysql
@@ -98,7 +98,7 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (0.2.12)
+    opener-pos-tagger (1.0.0)
       httpclient
       nokogiri
       opener-pos-tagger-base
@@ -107,10 +107,10 @@ GEM
       opener-pos-tagger-it
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-pos-tagger-base (0.9.0)
+    opener-pos-tagger-base (0.9.1)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-pos-tagger-en-es (0.9.3)
+    opener-pos-tagger-en-es (0.9.4)
       opener-build-tools
     opener-pos-tagger-fr (0.2.0)
       opener-build-tools
@@ -175,7 +175,7 @@ GEM
     rack-protection (1.5.2)
       rack
     rake (10.1.1)
-    rollbar (0.12.13)
+    rollbar (0.12.14)
       multi_json (~> 1.3)
     sinatra (1.4.4)
       rack (~> 1.4)

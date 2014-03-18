@@ -25,13 +25,33 @@ module Opener
       "property-tagger",
       "constituent-parser",
       "kaf-naf-parser",
-      "opinion-detector",
       "ner",
-      "outlet",
       "scorer",
-      "s3-outlet",
       "ned",
+      "opinion-detector",
+      "outlet",
+      "s3-outlet",
     ].freeze
+
+    PROCESSORS = [
+      "language-identifier",
+      "tokenizer",
+      "tree-tagger",
+      "POS-tagger",
+      "polarity-tagger",
+      "property-tagger",
+      "constituent-parser",
+      "kaf-naf-parser",
+      "ner",
+      "ned",
+      "opinion-detector"
+    ]
+
+    OUTLETS = [
+      "scorer",
+      "outlet",
+      "s3-outlet"
+    ]
 
     ##
     # @param [String] string

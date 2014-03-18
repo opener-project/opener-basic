@@ -31,7 +31,7 @@
         <textarea name="input" id="text" rows="10" cols="50"/></textarea>
       </div>
 
-      <% Opener::Basic::MODULES.each do |module_name| %>
+      <% Opener::Basic::PROCESSORS.each do |module_name| %>
         <div>
           <label for="<%=module_name.downcase%>">
             <input type="checkbox"
@@ -43,8 +43,24 @@
         </div>
       <% end %>
 
+      <p> Select which kind of outlet you want to use. An outlet stores the result of the pipeline
+      so that you can request the results of your analysis after a couple of seconds.</p>
+
+      <% Opener::Basic::OUTLETS.each do |module_name| %>
+        <div>
+          <label for="<%=module_name.downcase%>">
+            <input type="checkbox"
+                   name="callbacks[]"
+                   value="<%=request.base_url%>/<%=module_name.downcase%>"
+                   <%="checked disabled" if module_name.downcase == "language-identifier"%>/>
+            <%=module_name.downcase%>
+          </label>
+        </div>
+      <% end %>
 
       <div>
+        <p> In case an error occurs the system can post the error message to a place on the internet.
+        If you provide a URL below we will post the error straight to your systems. It's ok to leave this field empty though.</p>
         <label for="error_callback">Error Callback</label>
         <br />
 
