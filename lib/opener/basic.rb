@@ -40,7 +40,7 @@ module Opener
       ["POS-tagger", "please select either tree OR pos-tagger"],
       ["polarity-tagger", "detects if words are positive or negative"],
       ["property-tagger", "detects hotel specific topics like 'room' and 'value for money'"],
-      ["constituent-parser", "required for NER/ NED"],
+      ["constituent-parser", "required for Coreference Resolution"],
       ["NER", "detects named entities, required for NED"],
       ["NED", "disambiguates named entities"],
       ["opinion-detector", "detects opinions, works best with all other options turned on."]
