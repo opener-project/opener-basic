@@ -25,6 +25,7 @@ GEM
       uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
+    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
@@ -64,7 +65,7 @@ GEM
       httpclient
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (1.0.0)
+    opener-ner (1.0.1)
       httpclient
       nokogiri
       opener-ner-base
