@@ -35,7 +35,7 @@ module Opener
 
     PROCESSORS = [
       "language-identifier",
-      ["tokenizer", "required step"],
+      ["tokenizer", "required step (unless you paste in KAF and know what you're doing)"],
       ["tree-tagger", "please select either tree OR pos-tagger"],
       ["POS-tagger", "please select either tree OR pos-tagger"],
       ["polarity-tagger", "detects if words are positive or negative"],
