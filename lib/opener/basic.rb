@@ -23,14 +23,14 @@ module Opener
       "POS-tagger",
       "polarity-tagger",
       "property-tagger",
-      "opinion-detector",
-      "ner",
-      #"ned",
       "constituent-parser",
       "kaf-naf-parser",
+      "opinion-detector",
+      "ner",
       "outlet",
       "scorer",
-      "s3-outlet"
+      "s3-outlet",
+      "ned",
     ].freeze
 
     ##
