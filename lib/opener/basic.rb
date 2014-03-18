@@ -35,22 +35,21 @@ module Opener
 
     PROCESSORS = [
       "language-identifier",
-      "tokenizer",
-      "tree-tagger",
-      "POS-tagger",
-      "polarity-tagger",
-      "property-tagger",
-      "constituent-parser",
-      "kaf-naf-parser",
-      "ner",
-      "ned",
-      "opinion-detector"
+      ["tokenizer", "required step"],
+      ["tree-tagger", "please select either tree OR pos-tagger"],
+      ["POS-tagger", "please select either tree OR pos-tagger"],
+      ["polarity-tagger", "detects if words are positive or negative"],
+      ["property-tagger", "detects hotel specific topics like 'room' and 'value for money'"],
+      ["constituent-parser", "required for NER/ NED"],
+      ["NER", "detects named entities, required for NED"],
+      ["NED", "disambiguates named entities"],
+      ["opinion-detector", "detects opinions, works best with all other options turned on."]
     ]
 
     OUTLETS = [
-      "scorer",
-      "outlet",
-      "s3-outlet"
+      ["scorer", "aggregates the opinions from the opinion-detector into values between -1 and 1"],
+      ["outlet", "stores a KAF document in the database for later retrieval"],
+      ["s3-outlet", "stores the KAF document in S3. If you have OpeNER credentials this makes it easy to retrieve the files from disk"]
     ]
 
     ##

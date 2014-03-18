@@ -3,27 +3,61 @@
   <head>
     <link type="text/css" rel="stylesheet" charset="UTF-8" href="markdown.css"/>
     <title>Opener Webservices</title>
+    <style type="text/css">
+      form p {
+        width: 500px;
+      }
+
+      ul.components {
+        clear: both;
+        list-style-type: none;
+      }
+
+      li.block {
+        border: 1px solid #CCC;
+        border-bottom: 2px solid #CCC;
+        border-right: 2px solid #CCC;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin: 1em;
+        padding: .5em;
+        height: 25;
+        width: 150px;
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      input[type=submit] {
+        font-size: 18px;
+        padding: 0.5em;
+      }
+    </style>
   </head>
   <body>
     <h1>Opener Webservices</h1>
 
     <p>Want a test drive? <a href="#test">Click here to see the fast input form</a>.<p>
 
-    <h2>Endpoints</h2>
-    <p>The following webservices are available</p>
+    <h2>Available Webservices</h2>
+    <p>The following webservices are available. If you click on a link you'll be taken to
+    a page with more detailed information on the specific webservice.</p>
     <p>
-    <ul>
+    <ul class="components">
       <% Opener::Basic::MODULES.each do |module_name| %>
-        <li><a href="<%=url("/#{module_name.downcase}")%>"><%=module_name%></a></li>
+        <li class="block"><a href="<%=url("/#{module_name.downcase}")%>"><%=module_name%></a></li>
       <% end %>
     </ul>
+    <div class="clear">
     <a name="test"></a>
     <h2 name="test">Test Drive</h2>
-    <p>Paste a text below and check the checkboxes of the services you want to chain together.
-    Once you press submit you will see a URL where (after several seconds) you can ask for the result of your analysis.
-    The full OpeNER chain can take more than 30 seconds, so please be patient if you decide to check all boxes.</p>
-
     <form action="/language-identifier" method="post">
+      <p>Paste a text below and check the checkboxes of the services you want to chain together.
+      Once you press submit you will see a URL where (after several seconds) you can ask for the result of your analysis.
+      The full OpeNER chain can take more than 30 seconds, so please be patient if you decide to check all boxes.</p>
       <div>
         <label for="input"/>Type your (plain, non-kaf) text here*</label>
         <br/>
@@ -31,8 +65,9 @@
         <textarea name="input" id="text" rows="10" cols="50"/></textarea>
       </div>
 
-      <% Opener::Basic::PROCESSORS.each do |module_name| %>
-        <div>
+      <dl>
+      <% Opener::Basic::PROCESSORS.each do |module_name, explanation| %>
+        <dt>
           <label for="<%=module_name.downcase%>">
             <input type="checkbox"
                    name="callbacks[]"
@@ -40,23 +75,27 @@
                    <%="checked disabled" if module_name.downcase == "language-identifier"%>/>
             <%=module_name.downcase%>
           </label>
-        </div>
+        </dt>
+        <dd> <%=explanation unless explanation.nil?%></dd>
       <% end %>
 
       <p> Select which kind of outlet you want to use. An outlet stores the result of the pipeline
       so that you can request the results of your analysis after a couple of seconds.</p>
 
-      <% Opener::Basic::OUTLETS.each do |module_name| %>
-        <div>
-          <label for="<%=module_name.downcase%>">
-            <input type="checkbox"
-                   name="callbacks[]"
-                   value="<%=request.base_url%>/<%=module_name.downcase%>"
-                   <%="checked disabled" if module_name.downcase == "language-identifier"%>/>
-            <%=module_name.downcase%>
-          </label>
-        </div>
-      <% end %>
+      <dl>
+        <% Opener::Basic::OUTLETS.each do |module_name, explanation| %>
+          <dt>
+            <label for="<%=module_name.downcase%>">
+              <input type="radio"
+                     name="callbacks[]"
+                     value="<%=request.base_url%>/<%=module_name.downcase%>"
+                     <%="checked disabled" if module_name.downcase == "language-identifier"%>/>
+                     <%=module_name.downcase%>
+            </label>
+          </dt>
+          <dd><%=explanation unless explanation.nil?%></dd>
+        <% end %>
+      </dl>
 
       <div>
         <p> In case an error occurs the system can post the error message to a place on the internet.
@@ -66,16 +105,20 @@
 
         <input id="error_callback" type="text" name="error_callback" />
       </div>
-      <input type="submit" value="Submit" />
-    </form>
 
-    <h2> Posting to the webservices</h2>
-    <p> You can directly post to these webservices using the following endpoints </p>
-    <ul>
-      <% Opener::Basic::MODULES.each do |module_name| %>
-        <li><%=url("/#{module_name.downcase}")%></li>
-      <% end %>
-    </ul>
+      <div>
+        <p> Once you click this button, you'll see a JSON response that contains
+        a URL for the outlet you selected. You can copy paste that url in your
+        url bar, or click the URL of your browser supports that. Processing your
+        text may take up several seconds. So please be patient.
+        </p>
+        <p><em>Please visit the URL presented to you on the next page</em></p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+
+      </div>
+    </form>
 
   </body>
 </html>
