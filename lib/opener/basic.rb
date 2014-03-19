@@ -27,10 +27,10 @@ module Opener
       "kaf-naf-parser",
       "ner",
       "scorer",
-      "ned",
+      #"ned",
       "opinion-detector",
       "outlet",
-      "s3-outlet",
+      #"s3-outlet",
     ].freeze
 
     PROCESSORS = [
