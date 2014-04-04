@@ -42,7 +42,7 @@ GEM
       sinatra (~> 1.4.3)
       uuidtools
     method_source (0.8.2)
-    mini_portile (0.5.2)
+    mini_portile (0.5.3)
     multi_json (1.9.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -53,7 +53,7 @@ GEM
     opener-constituent-parser (0.2.0)
       opener-constituent-parser-base (>= 0.1.0)
       opener-webservice
-    opener-constituent-parser-base (0.2.1)
+    opener-constituent-parser-base (0.2.2)
     opener-language-identifier (2.4.0)
       builder
       httpclient
@@ -71,7 +71,7 @@ GEM
       opener-ner-base
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner-base (1.4.0)
+    opener-ner-base (1.4.1)
       opener-build-tools
     opener-opinion-detector (0.3.0)
       httpclient
@@ -100,23 +100,17 @@ GEM
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (1.0.0)
+    opener-pos-tagger (1.0.1)
       httpclient
       nokogiri
       opener-pos-tagger-base
       opener-pos-tagger-en-es
-      opener-pos-tagger-fr
-      opener-pos-tagger-it
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-pos-tagger-base (0.9.1)
+    opener-pos-tagger-base (0.9.2)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-pos-tagger-en-es (0.9.4)
-      opener-build-tools
-    opener-pos-tagger-fr (0.2.0)
-      opener-build-tools
-    opener-pos-tagger-it (0.10.0)
+    opener-pos-tagger-en-es (1.0.1)
       opener-build-tools
     opener-property-tagger (0.5.1)
       httpclient
@@ -176,7 +170,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
-    rake (10.1.1)
+    rake (10.2.2)
     rollbar (0.12.14)
       multi_json (~> 1.3)
     sinatra (1.4.4)
