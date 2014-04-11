@@ -25,7 +25,6 @@ GEM
       uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
-    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
@@ -61,8 +60,9 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
-    opener-ned (1.0.1)
+    opener-ned (1.1.0)
       httpclient
+      nokogiri
       opener-webservice
       sinatra (~> 1.4)
     opener-ner (1.0.1)
@@ -168,12 +168,12 @@ GEM
     puma (2.8.1-java)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    rack-protection (1.5.2)
+    rack-protection (1.5.3)
       rack
     rake (10.2.2)
     rollbar (0.12.14)
       multi_json (~> 1.3)
-    sinatra (1.4.4)
+    sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
