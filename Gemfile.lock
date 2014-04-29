@@ -25,6 +25,7 @@ GEM
       uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
+    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
@@ -83,6 +84,12 @@ GEM
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
+    opener-opinion-detector-basic (0.3.0)
+      httpclient
+      opener-build-tools (>= 0.2.7)
+      opener-webservice
+      rake
+      sinatra
     opener-outlet (0.3.2)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
@@ -112,7 +119,7 @@ GEM
       rake
     opener-pos-tagger-en-es (1.0.1)
       opener-build-tools
-    opener-property-tagger (0.5.1)
+    opener-property-tagger (0.6.0)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
@@ -170,7 +177,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
-    rake (10.2.2)
+    rake (10.3.1)
     rollbar (0.12.14)
       multi_json (~> 1.3)
     sinatra (1.4.5)
@@ -198,6 +205,7 @@ DEPENDENCIES
   opener-ned
   opener-ner
   opener-opinion-detector
+  opener-opinion-detector-basic
   opener-outlet
   opener-polarity-tagger
   opener-pos-tagger
