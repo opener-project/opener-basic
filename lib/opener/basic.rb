@@ -29,6 +29,7 @@ module Opener
       "scorer",
       "ned",
       "opinion-detector",
+      "opinion-detector-basic",
       "outlet",
       "s3-outlet",
     ].freeze
@@ -43,7 +44,8 @@ module Opener
       ["constituent-parser", "required for Coreference Resolution"],
       ["NER", "detects named entities, required for NED"],
       ["NED", "disambiguates named entities"],
-      ["opinion-detector", "detects opinions, works best with all other options turned on."]
+      ["opinion-detector", "detects opinions, works best with all other options turned on."],
+      ["opinion-detector-basic", "detects opinions, works best if the text has gone through the polarity-tagger."]
     ]
 
     OUTLETS = [
