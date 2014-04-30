@@ -10,28 +10,26 @@ GEM
       activesupport (= 3.2.17)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-jdbc-adapter (1.3.6)
+    activerecord-jdbc-adapter (1.3.7)
       activerecord (>= 2.2)
-    activerecord-jdbcmysql-adapter (1.3.6)
-      activerecord-jdbc-adapter (~> 1.3.6)
+    activerecord-jdbcmysql-adapter (1.3.7)
+      activerecord-jdbc-adapter (~> 1.3.7)
       jdbc-mysql (>= 5.1.22)
     activesupport (3.2.17)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
-    aws-sdk (1.36.1)
+    aws-sdk (1.39.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-      uuidtools (~> 2.1)
     builder (3.0.4)
     coderay (1.1.0)
-    ffi (1.9.3)
     ffi (1.9.3-java)
     httpclient (2.3.4.1)
     i18n (0.6.9)
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
-    jdbc-mysql (5.1.28)
+    jdbc-mysql (5.1.30)
     json (1.8.1)
     json (1.8.1-java)
     kaf-naf-parser (0.6.1)
@@ -43,7 +41,7 @@ GEM
       uuidtools
     method_source (0.8.2)
     mini_portile (0.5.3)
-    multi_json (1.9.0)
+    multi_json (1.9.3)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.1-java)
@@ -74,17 +72,17 @@ GEM
       sinatra (~> 1.4)
     opener-ner-base (1.4.1)
       opener-build-tools
-    opener-opinion-detector (0.4.0)
+    opener-opinion-detector (0.6.0)
       httpclient
       nokogiri
       opener-opinion-detector-base
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-opinion-detector-base (1.2.3)
+    opener-opinion-detector-base (1.2.4)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
-    opener-opinion-detector-basic (0.3.0)
+    opener-opinion-detector-basic (0.5.0)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
@@ -101,20 +99,20 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
-    opener-polarity-tagger (0.3.3)
+    opener-polarity-tagger (1.0.0)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
       rake
       sinatra
-    opener-pos-tagger (1.0.3)
+    opener-pos-tagger (1.0.4)
       httpclient
       nokogiri
       opener-pos-tagger-base
       opener-pos-tagger-en-es
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-pos-tagger-base (0.9.2)
+    opener-pos-tagger-base (1.0.0)
       opener-build-tools (>= 0.2.7)
       rake
     opener-pos-tagger-en-es (1.0.1)
@@ -133,7 +131,7 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
-    opener-scorer (0.3.1)
+    opener-scorer (0.3.2)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
       builder
@@ -150,7 +148,12 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.4.1)
-    opener-tree-tagger (0.12.1)
+    opener-tree-tagger (1.0.1)
+      httpclient
+      opener-build-tools (>= 0.2.7)
+      opener-webservice
+      rake
+      sinatra
     opener-webservice (0.2.1)
       json
       sinatra (~> 1.4.3)
@@ -170,15 +173,15 @@ GEM
     pry-theme (1.0.2)
       coderay (~> 1.1)
       json (~> 1.8)
-    puma (2.8.1)
+    puma (2.8.2)
       rack (>= 1.1, < 2.0)
-    puma (2.8.1-java)
+    puma (2.8.2-java)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
     rake (10.3.1)
-    rollbar (0.12.14)
+    rollbar (0.12.17)
       multi_json (~> 1.3)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -190,7 +193,7 @@ GEM
     tilt (1.4.1)
     tzinfo (0.3.39)
     uuidtools (2.1.4)
-    yard (0.8.7.3)
+    yard (0.8.7.4)
 
 PLATFORMS
   java
