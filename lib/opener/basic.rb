@@ -28,6 +28,7 @@ module Opener
       "ner",
       "scorer",
       "ned",
+      "coreference",
       "opinion-detector",
       "opinion-detector-basic",
       "outlet",
@@ -43,6 +44,7 @@ module Opener
       ["property-tagger", "detects hotel specific topics like 'room' and 'value for money'"],
       ["constituent-parser", "required for Coreference Resolution"],
       ["NER", "detects named entities, required for NED"],
+      ["Coreference", "Co-reference resolution"],
       ["NED", "disambiguates named entities"],
       ["opinion-detector", "detects opinions, works best with all other options turned on."],
       ["opinion-detector-basic", "detects opinions, works best if the text has gone through the polarity-tagger."]
