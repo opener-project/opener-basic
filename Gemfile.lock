@@ -24,12 +24,17 @@ GEM
       nokogiri (>= 1.4.4)
     builder (3.0.4)
     coderay (1.1.0)
+    ffi (1.9.3)
     ffi (1.9.3-java)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     httpclient (2.3.4.1)
     i18n (0.6.9)
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
     jdbc-mysql (5.1.30)
+    jdbc-sqlite3 (3.7.2.1)
     json (1.8.1)
     json (1.8.1-java)
     kaf-naf-parser (0.6.1)
@@ -39,9 +44,24 @@ GEM
       opener-webservice
       sinatra (~> 1.4.3)
       uuidtools
+    license_finder (1.0.0.0)
+      bundler
+      httparty
+      sequel
+      sqlite3
+      thor
+      xml-simple
+    license_finder (1.0.0.0-java)
+      bundler
+      httparty
+      jdbc-sqlite3
+      sequel
+      thor
+      xml-simple
     method_source (0.8.2)
     mini_portile (0.5.3)
     multi_json (1.9.3)
+    multi_xml (0.5.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.1-java)
@@ -52,6 +72,15 @@ GEM
       opener-constituent-parser-base (>= 0.1.0)
       opener-webservice
     opener-constituent-parser-base (0.2.2)
+    opener-coreference (0.1.0)
+      httpclient
+      opener-coreference-base
+      opener-webservice
+      sinatra (~> 1.4)
+    opener-coreference-base (0.7.4)
+      nokogiri
+      opener-build-tools (>= 0.2.7)
+      rake
     opener-language-identifier (2.4.0)
       builder
       httpclient
@@ -183,6 +212,7 @@ GEM
     rake (10.3.1)
     rollbar (0.12.17)
       multi_json (~> 1.3)
+    sequel (4.10.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -190,9 +220,12 @@ GEM
     slop (3.5.0)
     spoon (0.0.4)
       ffi
+    sqlite3 (1.3.9)
+    thor (0.19.1)
     tilt (1.4.1)
     tzinfo (0.3.39)
     uuidtools (2.1.4)
+    xml-simple (1.1.3)
     yard (0.8.7.4)
 
 PLATFORMS
@@ -203,7 +236,9 @@ DEPENDENCIES
   activesupport (~> 3.2)
   improved-rack-throttle
   kaf-naf-parser
+  license_finder
   opener-constituent-parser
+  opener-coreference
   opener-language-identifier
   opener-ned
   opener-ner

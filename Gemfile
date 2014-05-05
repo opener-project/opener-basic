@@ -16,11 +16,13 @@ gem "opener-ned"#, "0.4.0"
 gem "opener-constituent-parser"
 gem "opener-property-tagger"
 gem "opener-tree-tagger"
+gem "opener-coreference"
 gem "kaf-naf-parser"
 gem "uuidtools"
 gem "puma"
 gem "activesupport", "~>3.2"
 gem 'improved-rack-throttle'
+gem 'license_finder'
 
 group :development do
   gem 'pry'
