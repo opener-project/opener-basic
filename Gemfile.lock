@@ -2,12 +2,12 @@ GEM
   remote: https://rubygems.org/
   remote: https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitainooleap@geminabox.olery.com/
   specs:
-    activemodel (3.2.17)
-      activesupport (= 3.2.17)
+    activemodel (3.2.18)
+      activesupport (= 3.2.18)
       builder (~> 3.0.0)
-    activerecord (3.2.17)
-      activemodel (= 3.2.17)
-      activesupport (= 3.2.17)
+    activerecord (3.2.18)
+      activemodel (= 3.2.18)
+      activesupport (= 3.2.18)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
     activerecord-jdbc-adapter (1.3.7)
@@ -15,13 +15,18 @@ GEM
     activerecord-jdbcmysql-adapter (1.3.7)
       activerecord-jdbc-adapter (~> 1.3.7)
       jdbc-mysql (>= 5.1.22)
-    activesupport (3.2.17)
+    activesupport (3.2.18)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
-    aws-sdk (1.39.0)
+    aws-sdk (1.40.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    aws-sdk-core (2.0.0.rc6)
+      builder (~> 3.0)
+      jamespath
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
     builder (3.0.4)
     coderay (1.1.0)
     ffi (1.9.3)
@@ -33,6 +38,7 @@ GEM
     i18n (0.6.9)
     improved-rack-throttle (0.7.1)
       rack (>= 1.0.0)
+    jamespath (0.5.0)
     jdbc-mysql (5.1.30)
     jdbc-sqlite3 (3.7.2.1)
     json (1.8.1)
@@ -60,7 +66,7 @@ GEM
       xml-simple
     method_source (0.8.2)
     mini_portile (0.5.3)
-    multi_json (1.9.3)
+    multi_json (1.10.0)
     multi_xml (0.5.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -77,14 +83,18 @@ GEM
       opener-coreference-base
       opener-webservice
       sinatra (~> 1.4)
-    opener-coreference-base (0.7.4)
+    opener-coreference-base (1.1.7)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
-    opener-language-identifier (2.4.0)
+    opener-daemons (0.4.2)
+      aws-sdk-core
+      spoon
+    opener-language-identifier (2.6.1)
       builder
       httpclient
       opener-build-tools
+      opener-daemons
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
@@ -111,7 +121,7 @@ GEM
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
-    opener-opinion-detector-basic (0.6.0)
+    opener-opinion-detector-basic (0.6.1)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-webservice
@@ -170,16 +180,18 @@ GEM
       opener-webservice
       sinatra (~> 1.4.2)
       uuidtools
-    opener-tokenizer (0.6.1)
+    opener-tokenizer (0.8.1)
       httpclient
       nokogiri
+      opener-daemons
       opener-tokenizer-base (>= 0.3.1)
       opener-webservice
       sinatra (~> 1.4.2)
     opener-tokenizer-base (0.4.1)
-    opener-tree-tagger (1.0.6)
+    opener-tree-tagger (1.3.0)
       httpclient
       opener-build-tools (>= 0.2.7)
+      opener-daemons
       opener-webservice
       rake
       sinatra
