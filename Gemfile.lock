@@ -22,7 +22,7 @@ GEM
     aws-sdk (1.40.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-    aws-sdk-core (2.0.0.rc6)
+    aws-sdk-core (2.0.0.rc7)
       builder (~> 3.0)
       jamespath
       multi_json (~> 1.0)
@@ -90,7 +90,7 @@ GEM
     opener-daemons (0.4.2)
       aws-sdk-core
       spoon
-    opener-language-identifier (2.6.2)
+    opener-language-identifier (2.7.2)
       builder
       httpclient
       opener-build-tools
