@@ -83,7 +83,7 @@ GEM
       opener-coreference-base
       opener-webservice
       sinatra (~> 1.4)
-    opener-coreference-base (1.2.0)
+    opener-coreference-base (1.2.1)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
