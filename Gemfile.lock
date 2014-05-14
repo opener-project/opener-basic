@@ -68,13 +68,12 @@ GEM
       thor
       xml-simple
     method_source (0.8.2)
-    mini_portile (0.5.3)
+    mini_portile (0.6.0)
     multi_json (1.10.0)
     multi_xml (0.5.5)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
-    nokogiri (1.6.1-java)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    nokogiri (1.6.2.1-java)
     opener-build-tools (0.4.1)
       rake
     opener-constituent-parser (0.2.0)
@@ -121,7 +120,7 @@ GEM
       opener-opinion-detector-base
       opener-webservice
       sinatra (~> 1.4.2)
-    opener-opinion-detector-base (1.3.0)
+    opener-opinion-detector-base (1.3.3)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
