@@ -46,13 +46,6 @@ GEM
     jdbc-sqlite3 (3.7.2.1)
     json (1.8.1)
     json (1.8.1-java)
-    kaf-naf-parser (0.6.1)
-      builder
-      httpclient
-      opener-build-tools
-      opener-webservice
-      sinatra (~> 1.4.3)
-      uuidtools
     license_finder (1.0.0.0)
       bundler
       httparty
@@ -93,6 +86,13 @@ GEM
       aws-sdk-core
       dotenv
       spoon
+    opener-kaf-naf-parser (1.0.0)
+      builder
+      httpclient
+      opener-build-tools
+      opener-webservice
+      sinatra (~> 1.4.3)
+      uuidtools
     opener-language-identifier (2.7.2)
       builder
       httpclient
@@ -250,10 +250,10 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 3.2)
   improved-rack-throttle
-  kaf-naf-parser
   license_finder
   opener-constituent-parser
   opener-coreference
+  opener-kaf-naf-parser
   opener-language-identifier
   opener-ned
   opener-ner
