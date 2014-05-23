@@ -31,6 +31,7 @@ module Opener
       "coreference",
       "opinion-detector",
       "opinion-detector-basic",
+      "kaf_to_json",
       "outlet",
       "s3-outlet",
     ].freeze
@@ -47,7 +48,8 @@ module Opener
       ["Coreference", "Co-reference resolution"],
       ["NED", "disambiguates named entities"],
       ["opinion-detector", "detects opinions, works best with all other options turned on."],
-      ["opinion-detector-basic", "detects opinions, works best if the text has gone through the polarity-tagger."]
+      ["opinion-detector-basic", "detects opinions, works best if the text has gone through the polarity-tagger."],
+      ["kaf_to_json", "Converts KAF to JSON. Don't use with scorer."]
     ]
 
     OUTLETS = [

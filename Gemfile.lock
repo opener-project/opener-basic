@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://opener:Aek0YeeGup0ceephohcieW0eichiGha2Thoo0lohshunae9emaikeitainooleap@geminabox.olery.com/
   specs:
     activemodel (3.2.18)
       activesupport (= 3.2.18)
@@ -19,10 +18,10 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
-    aws-sdk (1.40.0)
+    aws-sdk (1.41.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-    aws-sdk-core (2.0.0.rc7)
+    aws-sdk-core (2.0.0.rc8)
       builder (~> 3.0)
       jamespath
       multi_json (~> 1.0)
@@ -32,7 +31,6 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
-    ffi (1.9.3)
     ffi (1.9.3-java)
     httparty (0.13.1)
       json (~> 1.8)
@@ -44,7 +42,6 @@ GEM
     jamespath (0.5.0)
     jdbc-mysql (5.1.30)
     jdbc-sqlite3 (3.7.2.1)
-    json (1.8.1)
     json (1.8.1-java)
     license_finder (1.0.0.0)
       bundler
@@ -62,75 +59,105 @@ GEM
       xml-simple
     method_source (0.8.2)
     mini_portile (0.6.0)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     multi_xml (0.5.5)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nokogiri (1.6.2.1-java)
-    opener-build-tools (0.4.1)
+    opener-build-tools (1.0.1)
       rake
-    opener-constituent-parser (0.2.0)
+    opener-constituent-parser (1.0.4)
+      nokogiri
       opener-constituent-parser-base (>= 0.1.0)
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-webservice
-    opener-constituent-parser-base (0.2.2)
-    opener-coreference (0.1.0)
+      puma
+    opener-constituent-parser-base (1.0.5)
+    opener-core (0.3.0)
+    opener-coreference (1.0.3)
       httpclient
+      nokogiri
+      opener-core (>= 0.1.2)
       opener-coreference-base
+      opener-daemons
       opener-webservice
+      puma
       sinatra (~> 1.4)
-    opener-coreference-base (1.3.1)
+    opener-coreference-base (2.0.2)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
-    opener-daemons (0.8.0)
-      aws-sdk-core
+    opener-daemons (1.1.1)
+      aws-sdk-core (>= 2.0.0.rc1, < 3)
       dotenv
       spoon
-    opener-kaf-naf-parser (1.0.0)
+    opener-kaf-naf-parser (1.0.3)
       builder
       httpclient
       opener-build-tools
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-webservice
+      puma
       sinatra (~> 1.4.3)
       uuidtools
-    opener-language-identifier (2.7.2)
+    opener-kaf2json (1.0.4-java)
+      builder
+      opener-core (>= 0.1.2)
+      opener-daemons
+      opener-webservice
+      puma
+      saxon-xslt
+      sinatra (~> 1.4.2)
+    opener-language-identifier (3.0.2)
       builder
       httpclient
       opener-build-tools
       opener-daemons
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
       uuidtools
-    opener-ned (1.1.0)
+    opener-ned (2.1.0)
       httpclient
       nokogiri
       opener-webservice
       sinatra (~> 1.4)
-    opener-ner (1.0.1)
+    opener-ner (2.0.2)
       httpclient
       nokogiri
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-ner-base
       opener-webservice
+      puma
       sinatra (~> 1.4)
-    opener-ner-base (1.4.1)
+    opener-ner-base (2.0.0)
       opener-build-tools
-    opener-opinion-detector (0.6.0)
+    opener-opinion-detector (1.0.3)
       httpclient
       nokogiri
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-opinion-detector-base
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
-    opener-opinion-detector-base (1.3.3)
+    opener-opinion-detector-base (2.1.2)
       nokogiri
       opener-build-tools (>= 0.2.7)
       rake
-    opener-opinion-detector-basic (0.8.0)
+    opener-opinion-detector-basic (1.0.2)
       httpclient
       opener-build-tools (>= 0.2.7)
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-webservice
+      puma
       rake
       sinatra
-    opener-outlet (0.3.2)
+    opener-outlet (1.0.5)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
       activesupport (~> 3.2)
@@ -138,67 +165,87 @@ GEM
       httpclient
       jdbc-mysql
       nokogiri
+      opener-core (>= 0.1.2)
+      opener-daemons
+      opener-kaf2json
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
       uuidtools
-    opener-polarity-tagger (1.2.1)
+    opener-polarity-tagger (2.1.3)
       httpclient
-      opener-build-tools (>= 0.2.7)
+      opener-build-tools (>= 1.0.1)
+      opener-core (>= 0.1.1)
+      opener-daemons
       opener-webservice
+      puma
       rake
       sinatra
-    opener-pos-tagger (1.0.4)
+    opener-pos-tagger (2.0.2)
       httpclient
       nokogiri
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-pos-tagger-base
       opener-pos-tagger-en-es
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
-    opener-pos-tagger-base (1.1.0)
+    opener-pos-tagger-base (2.0.0)
       opener-build-tools (>= 0.2.7)
       rake
-    opener-pos-tagger-en-es (1.0.1)
+    opener-pos-tagger-en-es (2.0.0)
       opener-build-tools
-    opener-property-tagger (1.0.2)
+    opener-property-tagger (2.1.1)
       httpclient
-      opener-build-tools (>= 0.2.7)
+      opener-build-tools (>= 1.0.1)
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-webservice
+      puma
       rake
       sinatra
-    opener-s3-outlet (0.5.1)
+    opener-s3-outlet (1.1.1)
       aws-sdk
       builder
       httpclient
       nokogiri
+      opener-daemons
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
       uuidtools
-    opener-scorer (0.3.2)
+    opener-scorer (1.0.6)
       activerecord (~> 3.2)
       activerecord-jdbcmysql-adapter
       builder
       httpclient
       jdbc-mysql
       nokogiri
+      opener-core (>= 0.1.2)
+      opener-daemons
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
       uuidtools
-    opener-tokenizer (0.8.1)
+    opener-tokenizer (1.0.2)
       httpclient
       nokogiri
       opener-daemons
       opener-tokenizer-base (>= 0.3.1)
       opener-webservice
+      puma
       sinatra (~> 1.4.2)
-    opener-tokenizer-base (0.4.1)
-    opener-tree-tagger (1.4.0)
+    opener-tokenizer-base (1.0.0)
+    opener-tree-tagger (2.0.2)
       httpclient
       opener-build-tools (>= 0.2.7)
       opener-daemons
       opener-webservice
+      puma
       rake
       sinatra
-    opener-webservice (0.2.1)
+    opener-webservice (1.0.1)
       json
       sinatra (~> 1.4.3)
       uuidtools
@@ -214,19 +261,18 @@ GEM
     pry-doc (0.6.0)
       pry (~> 0.9)
       yard (~> 0.8)
-    pry-theme (1.0.2)
+    pry-theme (1.0.3)
       coderay (~> 1.1)
       json (~> 1.8)
-    puma (2.8.2)
-      rack (>= 1.1, < 2.0)
     puma (2.8.2-java)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
-    rake (10.3.1)
-    rollbar (0.12.17)
+    rake (10.3.2)
+    rollbar (0.12.18)
       multi_json (~> 1.3)
+    saxon-xslt (0.2.0.1-java)
     sequel (4.10.0)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -245,7 +291,6 @@ GEM
 
 PLATFORMS
   java
-  ruby
 
 DEPENDENCIES
   activesupport (~> 3.2)
@@ -254,6 +299,7 @@ DEPENDENCIES
   opener-constituent-parser
   opener-coreference
   opener-kaf-naf-parser
+  opener-kaf2json
   opener-language-identifier
   opener-ned
   opener-ner
