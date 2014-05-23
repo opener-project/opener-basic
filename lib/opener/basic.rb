@@ -8,6 +8,7 @@ require_relative 'basic/fixed_hash'
 require_relative 'basic/ignored_input'
 require_relative 'basic/post_limit'
 require_relative 'basic/server'
+require 'opener/scorer'
 
 module Opener
   module Basic
@@ -19,19 +20,18 @@ module Opener
     MODULES = [
       "language-identifier",
       "tokenizer",
-      "tree-tagger",
       "POS-tagger",
-      "polarity-tagger",
-      "property-tagger",
+      "tree-tagger",
       "constituent-parser",
-      "kaf-naf-parser",
       "ner",
-      "scorer",
       "ned",
       "coreference",
+      "polarity-tagger",
+      "property-tagger",
       "opinion-detector",
       "opinion-detector-basic",
       "kaf_to_json",
+      "scorer",
       "outlet",
       "s3-outlet",
     ].freeze

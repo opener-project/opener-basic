@@ -82,6 +82,16 @@ GEM
       aws-sdk-core (>= 2.0.0.rc1, < 3)
       dotenv
       spoon
+    opener-kaf-naf-parser (1.0.3)
+      builder
+      httpclient
+      opener-build-tools
+      opener-core (>= 0.1.2)
+      opener-daemons
+      opener-webservice
+      puma
+      sinatra (~> 1.4.3)
+      uuidtools
     opener-kaf2json (1.0.4-java)
       builder
       opener-core (>= 0.1.2)
@@ -277,6 +287,7 @@ DEPENDENCIES
   license_finder
   opener-constituent-parser
   opener-coreference
+  opener-kaf-naf-parser
   opener-kaf2json
   opener-language-identifier
   opener-ned
