@@ -79,7 +79,7 @@
                    name="callbacks[]"
                    value="<%=request.base_url%>/<%=module_name.downcase%>"
                    <%="checked disabled" if module_name.downcase == "language-identifier"%>
-                   <%="checked" unless module_name.downcase.include?("tree-tagger")%>
+                   <%="checked" unless module_name.downcase.include?("tree-tagger") || module_name.downcase.include?("kaf_to_json") || module_name.downcase.include?("opinion-detector-basic")%>
             />
             <%=module_name.downcase%>
           </label>
