@@ -6,6 +6,8 @@ OpeNER basic is a fairly standard configuration of all OpeNER component in a sin
 Installation
 ------------
 
+We advise you to take a look at the [Local Installations documentation](http://www.opener-project.eu/getting-started/how-to/local-installation.html) at the Project Portal. To help you setup the basics needed for OpeNER. Once you have that setup continue as follows.
+
 Make sure you run JRuby. If you have RVM installed this might do the trick:
 
 ```
